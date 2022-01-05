@@ -23,6 +23,7 @@ public class Main {
             System.out.println("[3] Perbesar Volume");
             System.out.println("[4] Kecilkan Volume");
             System.out.println("[5] Buka Music");
+            System.out.println("[6] Buka GoPlay");
             System.out.println("[0] Keluar");
             System.out.println("--------------------------");
             System.out.print("Pilih aksi> ");
@@ -61,6 +62,41 @@ public class Main {
                     } else if (action.equalsIgnoreCase("4")) {
                         hp.playMusic();
                     } else if (action.equalsIgnoreCase("0")) {
+                        System.exit(0);
+                    } else {
+                        System.out.println("Kamu memilih aksi yang salah!");
+                    }
+                }
+            } else if (aksi.equalsIgnoreCase("6")){
+                String action_film;
+                while (true) {
+                    System.out.println("=== GOPLAY INTERFACE ===");
+                    System.out.println("[1] Spider Man");
+                    System.out.println("[2] Wolverine");
+                    System.out.println("[3] Iron Man");
+                    System.out.println("[4] The Matrix");
+                    System.out.println("[5] Resident Evil");
+                    System.out.println("[0] Keluar");
+                    System.out.println("--------------------------");
+                    System.out.print("Pilih aksi> ");
+                    action_film = input.nextLine();
+
+                    if (action_film.equalsIgnoreCase("1")) {
+                        Film spiderman = new FilmSpiderman();
+                        System.out.println("Harga film Spider Man : " + spiderman.getHarga());
+                    } else if (aksi.equalsIgnoreCase("2")) {
+                        Film wolverine = new FilmWolverine();
+                        System.out.println("Harga film Wolverine : " + wolverine.getHarga());
+                    } else if (aksi.equalsIgnoreCase("3")) {
+                        Film ironman = new FilmIronman();
+                        System.out.println("Harga film Iron Man : " + ironman.getHarga());
+                    } else if (aksi.equalsIgnoreCase("4")) {
+                        Film thematrix = new FilmTheMatrix();
+                        System.out.println("Harga film The Matrix : " + thematrix.getHarga());
+                    } else if (aksi.equalsIgnoreCase("5")) {
+                        Film residentevil = new FilmResidentEvil();
+                        System.out.println("Harga film Resident Evil : " + residentevil.getHarga());
+                    } else if (aksi.equalsIgnoreCase("0")) {
                         System.exit(0);
                     } else {
                         System.out.println("Kamu memilih aksi yang salah!");
